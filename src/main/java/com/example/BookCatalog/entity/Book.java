@@ -1,6 +1,9 @@
 package com.example.BookCatalog.entity;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 @Entity
 public class Book {
@@ -12,11 +15,12 @@ public class Book {
 
     private double price;
 
-    public Book(){}
+    public Book() {
+    }
 
-    public Book(Long id,String title,String author, double price) {
+    public Book(Long id, String title, String author, double price) {
         this.id = id;
-        this.title= title;
+        this.title = title;
         this.author = author;
         this.price = price;
     }
@@ -48,5 +52,9 @@ public class Book {
     public double getPrice() {
         return price;
     }
-    public void setPrice(double price) { this.price = price;}
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
 }
+
